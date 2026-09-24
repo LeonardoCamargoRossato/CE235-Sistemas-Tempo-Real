@@ -1,0 +1,2 @@
+import { ExternalLink } from "lucide-react";
+export default function ProfessorCard({name,href,interests}:{name:string;href?:string;interests?:string[]}){return <article className="professor-card"><span>Professor</span><h3>{name}</h3>{interests&&<p>{interests.join(" · ")}</p>}{href&&<a href={href} target="_blank" rel="noopener noreferrer">Página do Professor <ExternalLink size={14}/></a>}</article>}

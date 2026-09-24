@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="760" viewBox="0 0 1920 760">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06152d"/><stop offset="1" stop-color="#123f73"/></linearGradient></defs>
+<rect width="1920" height="760" fill="url(#g)"/>
+<g fill="none" stroke="#3f83c5" opacity=".25">
+<path d="M0 590 L420 240 L760 510 L1120 160 L1540 520 L1920 210"/>
+<circle cx="1480" cy="180" r="120"/><circle cx="1480" cy="180" r="180"/>
+</g>
+<text x="120" y="280" fill="#fff" font-family="Arial" font-size="72" font-weight="700">Arquitetura de Sistemas Híbridos</text>
+<text x="125" y="350" fill="#d6b35a" font-family="Arial" font-size="30">CE-235 • Sistemas de Tempo Real • ITA</text>
+<text x="125" y="620" fill="#b7c6d9" font-family="Arial" font-size="22">Placeholder — substitua pela capa original em hero-ce235.png</text>
+</svg>

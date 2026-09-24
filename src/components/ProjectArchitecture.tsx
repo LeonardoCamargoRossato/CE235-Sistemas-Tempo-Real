@@ -1,0 +1,3 @@
+import { Satellite, RadioTower, Cpu, MapPin, Database } from "lucide-react";
+const nodes=[{icon:Satellite,label:"Satélites / Nós"},{icon:RadioTower,label:"Telemetria"},{icon:Cpu,label:"Estação / Nó"},{icon:Cpu,label:"Processamento"},{icon:MapPin,label:"Posicionamento"},{icon:Database,label:"Dados / HMI"}];
+export default function ProjectArchitecture(){return <div className="project-architecture">{nodes.map(({icon:Icon,label},i)=><div className="project-architecture__group" key={label}><div className="project-architecture__node"><Icon/><span>{label}</span></div>{i<nodes.length-1&&<div className="project-architecture__link"><i/></div>}</div>)}</div>}

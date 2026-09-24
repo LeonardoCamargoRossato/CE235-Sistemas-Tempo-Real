@@ -1,0 +1,2 @@
+const steps=["Recepção","JSON Parser","Schema Check","Range Check","Sequence Check"];
+export default function TelemetryFlow(){return <div className="telemetry-flow"><div className="telemetry-end"><span>TIME 1</span><strong>Raw Telemetry</strong></div>{steps.map(s=><div className="telemetry-step" key={s}><i/><span>{s}</span></div>)}<div className="telemetry-end"><span>TIME 2</span><strong>Validated Telemetry</strong></div></div>}

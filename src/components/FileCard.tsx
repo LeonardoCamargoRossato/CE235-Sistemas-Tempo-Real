@@ -1,0 +1,3 @@
+import { ExternalLink, FileText } from "lucide-react";
+import type { FileItem } from "../data/lists";
+export default function FileCard({file,listLabel,driveUrl}:{file:FileItem;listLabel?:string;driveUrl?:string}){return <article className="file-card"><div className="file-card__icon"><FileText/></div><div>{listLabel&&<span className="eyebrow">{listLabel}</span>}<h3>{file.title}</h3><span className="file-type">{file.type}</span><p>{file.description}</p>{driveUrl?<a className="button button--secondary" href={driveUrl} target="_blank" rel="noopener noreferrer">Abrir no Drive <ExternalLink size={15}/></a>:<span className="drive-link-pending">Link no Drive a confirmar</span>}</div></article>}
