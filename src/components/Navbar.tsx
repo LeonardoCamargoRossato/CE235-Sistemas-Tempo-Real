@@ -2,18 +2,18 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { links } from "../data/links";
+import { assets } from "../data/assets";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
-  const itaLogo = `${import.meta.env.BASE_URL}assets/ITA_logo.png`;
 
   return (
     <>
       <header className="navbar navbar--institutional">
         <div className="container navbar__inner">
           <NavLink className="brand brand--ita" to="/" onClick={close}>
-            <img src={itaLogo} alt="ITA" />
+            <img src={assets.itaLogo} alt="Instituto Tecnológico de Aeronáutica — ITA" />
             <span>
               <strong>CE-235</strong>
               <small>Sistemas de Tempo Real</small>
