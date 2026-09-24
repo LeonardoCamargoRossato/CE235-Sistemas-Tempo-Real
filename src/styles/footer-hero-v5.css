@@ -1,0 +1,121 @@
+/* === V5 — Logo ITA no Hero + Footer no padrão US123 === */
+
+.hero-seal img {
+  width: 150px;
+  height: auto;
+  max-height: 105px;
+  object-fit: contain;
+  filter: none;
+  margin: 0 0 22px;
+  display: block;
+}
+
+.hero-seal strong {
+  display: block;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: .08em;
+}
+
+.hero-seal span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .22em;
+  color: #b7c9dc;
+  margin-top: 10px;
+}
+
+.footer--us123 {
+  background: #fff;
+  color: var(--navy);
+  border-top: 1px solid var(--line);
+  padding: 30px 0 24px;
+}
+
+.footer--us123 .footer__institutional {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer--us123 .footer__identity {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer--us123 .footer__identity img {
+  width: 92px;
+  height: 62px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.footer--us123 .footer__identity div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer--us123 .footer__identity strong {
+  color: var(--navy);
+  font-size: 13px;
+}
+
+.footer--us123 .footer__identity span,
+.footer--us123 .footer__identity small {
+  color: #627086;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.footer--us123 .footer__identity small {
+  margin-top: 4px;
+}
+
+.footer--us123 .footer__author {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 2px;
+}
+
+.footer--us123 .footer__author small,
+.footer--us123 .footer__author span {
+  color: #758296;
+  font-size: 11px;
+}
+
+.footer--us123 .footer__author strong {
+  color: var(--navy);
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .hero-seal img {
+    width: 125px;
+    max-height: 90px;
+  }
+
+  .footer--us123 .footer__institutional {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .footer--us123 .footer__identity {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .footer--us123 .footer__identity img {
+    width: 72px;
+    height: 52px;
+  }
+
+  .footer--us123 .footer__author {
+    text-align: left;
+    padding-left: 90px;
+  }
+}
