@@ -1,0 +1,96 @@
+/* V7 — Hero satélite / navegação regional brasileira */
+.institutional-hero--satellite {
+  position: relative;
+  min-height: 435px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.institutional-hero__satellite-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      rgba(2, 23, 48, .96) 0%,
+      rgba(2, 23, 48, .88) 30%,
+      rgba(2, 23, 48, .48) 52%,
+      rgba(2, 23, 48, .08) 76%,
+      rgba(2, 23, 48, .04) 100%);
+  z-index: 0;
+}
+
+.institutional-hero__content--satellite {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  min-height: 435px;
+}
+
+.institutional-hero__content--satellite .institutional-hero__copy {
+  width: min(620px, 56%);
+}
+
+.institutional-hero__content--satellite h1 {
+  max-width: 620px;
+}
+
+.institutional-hero__content--satellite p {
+  max-width: 610px;
+  text-shadow: 0 1px 12px rgba(0,0,0,.28);
+}
+
+/* O antigo selo da direita deixa de existir no novo Hero. */
+.institutional-hero--satellite .hero-seal {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .institutional-hero--satellite {
+    min-height: 500px;
+    background-position: 62% center;
+  }
+
+  .institutional-hero__content--satellite {
+    min-height: 500px;
+  }
+
+  .institutional-hero__content--satellite .institutional-hero__copy {
+    width: min(680px, 78%);
+  }
+
+  .institutional-hero__satellite-overlay {
+    background: linear-gradient(90deg,
+      rgba(2,23,48,.97) 0%,
+      rgba(2,23,48,.88) 48%,
+      rgba(2,23,48,.45) 78%,
+      rgba(2,23,48,.28) 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .institutional-hero--satellite {
+    min-height: 560px;
+    background-position: 68% center;
+  }
+
+  .institutional-hero__content--satellite {
+    min-height: 560px;
+    align-items: flex-end;
+    padding-bottom: 48px;
+  }
+
+  .institutional-hero__content--satellite .institutional-hero__copy {
+    width: 100%;
+  }
+
+  .institutional-hero__satellite-overlay {
+    background: linear-gradient(180deg,
+      rgba(2,23,48,.38) 0%,
+      rgba(2,23,48,.68) 35%,
+      rgba(2,23,48,.96) 68%,
+      rgba(2,23,48,.99) 100%);
+  }
+}
