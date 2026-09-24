@@ -1,2 +1,42 @@
-import { useState } from "react";import { NavLink } from "react-router-dom";import { Menu, X } from "lucide-react";import { links } from "../data/links";
-export default function Navbar(){const[open,setOpen]=useState(false);const close=()=>setOpen(false);return <><header className="navbar navbar--institutional"><div className="container navbar__inner"><NavLink className="brand brand--ita" to="/" onClick={close}><img src={`${import.meta.env.BASE_URL}images/ita-logo.png`} alt="ITA" onError={(e)=>{e.currentTarget.style.visibility="hidden"}}/><span><strong>CE-235</strong><small>Sistemas de Tempo Real</small></span></NavLink><button className="menu-button" onClick={()=>setOpen(!open)} aria-label="Abrir menu">{open?<X/>:<Menu/>}</button><nav className={`nav-links ${open?"is-open":""}`}><NavLink to="/" onClick={close}>Início</NavLink><NavLink to="/disciplina" onClick={close}>Disciplina</NavLink><NavLink to="/listas" onClick={close}>Listas</NavLink><NavLink to="/projeto" onClick={close}>Projeto SPRB-TR/BD</NavLink><NavLink to="/sprint1" onClick={close}>Sprint 1</NavLink><NavLink to="/scade" onClick={close}>SCADE</NavLink><NavLink to="/artefatos" onClick={close}>Artefatos</NavLink><a href={links.portfolio} target="_blank" rel="noopener noreferrer" onClick={close}>About ↗</a></nav></div></header><div className="institutional-rule"><i/><i/><i/></div></>}
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { links } from "../data/links";
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+  const itaLogo = `${import.meta.env.BASE_URL}assets/ITA_logo.png`;
+
+  return (
+    <>
+      <header className="navbar navbar--institutional">
+        <div className="container navbar__inner">
+          <NavLink className="brand brand--ita" to="/" onClick={close}>
+            <img src={itaLogo} alt="ITA" />
+            <span>
+              <strong>CE-235</strong>
+              <small>Sistemas de Tempo Real</small>
+            </span>
+          </NavLink>
+
+          <button className="menu-button" onClick={() => setOpen(!open)} aria-label="Abrir menu">
+            {open ? <X /> : <Menu />}
+          </button>
+
+          <nav className={`nav-links ${open ? "is-open" : ""}`}>
+            <NavLink to="/" onClick={close}>Início</NavLink>
+            <NavLink to="/disciplina" onClick={close}>Disciplina</NavLink>
+            <NavLink to="/listas" onClick={close}>Listas</NavLink>
+            <NavLink to="/projeto" onClick={close}>Projeto SPRB-TR/BD</NavLink>
+            <NavLink to="/sprint1" onClick={close}>Sprint 1</NavLink>
+            <NavLink to="/scade" onClick={close}>SCADE</NavLink>
+            <NavLink to="/artefatos" onClick={close}>Artefatos</NavLink>
+            <a href={links.portfolio} target="_blank" rel="noopener noreferrer" onClick={close}>About ↗</a>
+          </nav>
+        </div>
+      </header>
+      <div className="institutional-rule"><i /><i /><i /></div>
+    </>
+  );
+}

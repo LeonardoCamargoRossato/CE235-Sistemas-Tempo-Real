@@ -1,0 +1,29 @@
+/* V6 — correção definitiva das logos ITA */
+.brand--ita img{
+  width:72px;
+  height:50px;
+  object-fit:contain;
+  display:block;
+  filter:none !important;
+}
+.hero-seal img{
+  width:150px;
+  height:auto;
+  max-height:110px;
+  object-fit:contain;
+  display:block;
+  filter:none !important;
+  margin:0 0 22px;
+}
+.footer--us123 .footer__identity img{
+  width:92px;
+  height:62px;
+  object-fit:contain;
+  display:block;
+  filter:none !important;
+}
+@media(max-width:760px){
+  .brand--ita img{width:58px;height:42px}
+  .hero-seal img{width:125px;max-height:90px}
+  .footer--us123 .footer__identity img{width:72px;height:52px}
+}
