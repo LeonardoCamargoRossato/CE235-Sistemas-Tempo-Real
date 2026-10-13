@@ -1,1 +1,18 @@
-import ListCard from"../components/ListCard";import SectionTitle from"../components/SectionTitle";import{lists}from"../data/lists";export default function Lists(){return <section className="section page-section"><div className="container"><SectionTitle eyebrow="CE-235" title="Listas e Labs" description="Organização das atividades conforme os materiais reais da disciplina."/><div className="cards-grid">{lists.map(x=><ListCard key={x.id} item={x}/>)}</div></div></section>}
+import ListCard from "../components/ListCard";
+import SectionTitle from "../components/SectionTitle";
+import { lists } from "../data/lists";
+
+export default function Lists() {
+  return (
+    <section className="section page-section">
+      <div className="container">
+        <SectionTitle
+          eyebrow="CE-235"
+          title="Lista de Exercícios"
+          description="Organização das atividades conforme os materiais reais da disciplina."
+        />
+        <div className="cards-grid">{lists.map((x) => <ListCard key={x.id} item={x} />)}</div>
+      </div>
+    </section>
+  );
+}

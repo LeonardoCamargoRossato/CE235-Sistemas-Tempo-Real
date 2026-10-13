@@ -1,1 +1,19 @@
-import SectionTitle from"../components/SectionTitle";import StatusBadge from"../components/StatusBadge";export default function FinalReport(){return <section className="section page-section"><div className="container"><SectionTitle eyebrow="CE-235 — Sistemas de Tempo Real" title="Relatório Final" description="Não foi identificado, nos materiais fornecidos, um relatório final consolidado da disciplina."/><div className="final-report-card"><StatusBadge status="Em desenvolvimento"/><h2>CE-235 — Sistemas de Tempo Real</h2><p>O relatório final está em desenvolvimento.</p></div></div></section>}
+import SectionTitle from "../components/SectionTitle";
+
+export default function FinalReport() {
+  return (
+    <section className="section page-section">
+      <div className="container">
+        <SectionTitle
+          eyebrow="CE-235 — Sistemas de Tempo Real"
+          title="Relatório Final"
+          description="Relatório consolidado das atividades desenvolvidas durante a disciplina CE-235 — Sistemas Embarcados de Tempo Real."
+        />
+        <div className="final-report-card">
+          <h2>Relatório Final</h2>
+          <p>Documento a ser disponibilizado.</p>
+        </div>
+      </div>
+    </section>
+  );
+}

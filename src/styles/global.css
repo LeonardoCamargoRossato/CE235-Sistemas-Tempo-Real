@@ -71,3 +71,49 @@
 .official-reference-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}.official-reference-card{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;color:var(--navy);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}.official-reference-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--blue)}.official-reference-card div{display:flex;flex-direction:column;gap:5px}.official-reference-card strong{font-size:16px}.official-reference-card span{font-size:12px;color:var(--muted)}.official-reference-card svg{flex:0 0 auto;color:var(--blue)}
 @media(max-width:900px){.project-context-flow{grid-template-columns:1fr}.project-context-flow__arrow{transform:none;justify-self:center}.official-reference-grid{grid-template-columns:1fr}}
 @media(max-width:640px){.hero-glass-panel{background:rgba(2,22,47,.80)}.academic-project-panel{padding:24px 20px}}
+
+
+/* === V10 — navegação minimalista + artefatos do Time 2 === */
+.content-hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.content-hub-card{display:flex;flex-direction:column;min-height:220px;padding:25px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:16px;box-shadow:0 6px 20px rgba(7,23,47,.04);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.content-hub-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--blue)}
+.content-hub-card small{font-size:10px;font-weight:900;letter-spacing:.12em;color:var(--blue)}
+.content-hub-card h3{font-size:21px;color:var(--navy);margin:14px 0 8px}
+.content-hub-card p{color:var(--muted);line-height:1.6;flex:1;margin:0}
+.content-hub-card span{display:flex;align-items:center;gap:6px;margin-top:20px;font-size:12px;font-weight:900;color:var(--blue)}
+
+.discipline-drive-highlight{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px;padding:24px 26px;margin:10px 0 54px;background:linear-gradient(135deg,#07172f,#0f3d6b);color:#fff;border:1px solid #1d5688;border-left:4px solid var(--gold);border-radius:16px;box-shadow:0 12px 30px rgba(7,23,47,.12);transition:transform .22s ease,box-shadow .22s ease}
+.discipline-drive-highlight:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(7,23,47,.18)}
+.discipline-drive-highlight__icon{width:52px;height:52px;display:grid;place-items:center;border-radius:13px;background:rgba(255,255,255,.10);color:var(--gold)}
+.discipline-drive-highlight small{display:block;color:#a9c5df;font-size:10px;letter-spacing:.12em;font-weight:900}
+.discipline-drive-highlight strong{display:block;font-size:22px;margin:4px 0}
+.discipline-drive-highlight p{margin:0;color:#d4dfeb;line-height:1.5;font-size:14px}
+.discipline-drive-highlight b{display:flex;align-items:center;gap:7px;font-size:12px;white-space:nowrap;color:#fff}
+
+.artifact-section-heading{margin-bottom:24px}
+.artifact-section-heading h2{font-size:32px;color:var(--navy);margin:7px 0}
+.drive-folder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.drive-folder-card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 20px rgba(7,23,47,.04);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.drive-folder-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#c6d7e8}
+.drive-folder-preview{height:250px;background:#f5f7fa;border-bottom:1px solid var(--line)}
+.drive-folder-preview iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+.drive-folder-card__body{padding:24px}
+.drive-folder-card__body h3{margin:0 0 10px;color:var(--navy);font-size:22px}
+.drive-folder-card__body p{min-height:92px;margin:0;color:var(--muted);line-height:1.6}
+.drive-folder-card__body .button{margin-top:20px}
+
+.curriculum-card,.final-report-card{max-width:760px;padding:30px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:16px;box-shadow:0 6px 20px rgba(7,23,47,.04)}
+.curriculum-card h2,.final-report-card h2{margin-top:0;color:var(--navy)}
+.curriculum-card p,.final-report-card p{color:var(--muted);line-height:1.65}
+
+@media(max-width:900px){
+  .content-hub-grid{grid-template-columns:1fr}
+  .drive-folder-grid{grid-template-columns:1fr}
+  .discipline-drive-highlight{grid-template-columns:auto 1fr}
+  .discipline-drive-highlight>b{grid-column:2}
+}
+@media(max-width:640px){
+  .discipline-drive-highlight{grid-template-columns:1fr;padding:22px}
+  .discipline-drive-highlight>b{grid-column:auto;white-space:normal}
+  .drive-folder-preview{height:220px}
+}
