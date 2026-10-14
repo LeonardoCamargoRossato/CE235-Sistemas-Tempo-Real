@@ -11,7 +11,7 @@ export default function DriveFilePreview({title,fileName,description,fileId,loca
  return <>
   <article className={`drive-file-preview-card${large?" drive-file-preview-card--large":""}`}>
    <div className="drive-file-preview-card__viewer">{preview?<iframe src={preview} title={`PDF — ${title}`} loading="lazy" allow="autoplay"/>:<div className="drive-file-preview-card__fallback"><FileText size={34}/><span>Preview individual pendente</span></div>}</div>
-   <div className="drive-file-preview-card__body"><span className="file-type-pill">PDF</span><h3>{title}</h3><small>{fileName}</small><p>{description}</p>
+   <div className="drive-file-preview-card__body"><span className="file-type-pill">PDF</span><h3>{title}</h3><small className="drive-file-preview-card__filename" title={fileName}>{fileName}</small><p>{description}</p>
     <div className="preview-actions"><a className="button button--primary" href={href} target="_blank" rel="noopener noreferrer">{buttonLabel} <ExternalLink size={14}/></a>
     {preview&&<button className="button button--secondary" onClick={()=>setOpen(true)}>Expandir <Expand size={14}/></button>}</div>
    </div>

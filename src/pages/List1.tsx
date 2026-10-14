@@ -1,6 +1,7 @@
 import CompactListHeader from "../components/CompactListHeader";
 import DriveFolderPreview from "../components/DriveFolderPreview";
 import EvidenceGallery from "../components/EvidenceGallery";
+import DriveFilePreview from "../components/DriveFilePreview";
 import ReportPdfViewer from "../components/ReportPdfViewer";
 import { links } from "../data/links";
 
@@ -12,7 +13,10 @@ export default function List1(){return <>
    <div className="dashboard-materials">
     <DriveFolderPreview title="Arquivos do Lab 1" description="LG.html, relatório, landing_gear.zip e demais materiais do Landing Gear." href={links.lab1Drive} embed={links.lab1Embed} buttonLabel="Abrir pasta do Lab 1"/>
    </div>
-   <ReportPdfViewer title="Relatório do Lab 1" fileName="RelatórioLab1_SistemasTempoReal_ITA_LeonardoRossato.pdf" description="Desenvolvimento e simulação do Landing Gear System utilizando ANSYS SCADE." fileId={links.lab1ReportPdfId} fallbackHref={links.lab1Drive}/>
+   <div className="list1-official-docs-grid">
+    <DriveFilePreview title="Relatório do Lab 1" fileName="RelatórioLab1_SistemasTempoReal_ITA_LeonardoRossato.pdf" description="Desenvolvimento e simulação do Landing Gear System utilizando ANSYS SCADE." fileId={links.lab1ReportPdfId} fallbackHref={links.lab1Drive} large/>
+    <DriveFilePreview title="Enunciado — ListEx 1" fileName="Aula09.2dCe237Ce230Ce23526s(Especificação de Requisitos da ListEx1 do LAB 1 e do LAB 2_Prof. Cunha).docx(1).pdf" description="Especificação de Requisitos da ListEx 1 — Labs 1 e 2 / ANSYS SCADE." localSrc={`${import.meta.env.BASE_URL}documents/list1/Aula09.2dCe237Ce230Ce23526s(Especificação de Requisitos da ListEx1 do LAB 1 e do LAB 2_Prof. Cunha).docx(1).pdf`} fallbackHref={links.list1Drive} large/>
+   </div>
    <div className="evidence-grid"><EvidenceGallery title="Evidências do Lab 1" folderHref={links.lab1EvidenceDrive} folderEmbed={links.lab1EvidenceEmbed}/><EvidenceGallery title="Landing Gear — Evidências da Simulação" folderHref={links.landingGearEvidenceDrive} folderEmbed={links.landingGearEvidenceEmbed}/></div>
    <div className="academic-detail"><h3>O que foi desenvolvido</h3><p className="prose">Desenvolvimento e simulação de um aplicativo de software de sistema embarcado de tempo real para controlar e representar os acionamentos do sistema de trem de pouso de uma aeronave fictícia utilizando ANSYS SCADE.</p>
     <ul className="compact-list"><li>Interface gráfica no SCADE Display.</li><li>Indicadores para nariz, lado esquerdo e lado direito.</li><li>Comandos Up/Down e Fail/Norm.</li><li>Lógica implementada no SCADE Suite.</li><li>Máquina de estados DOWN → TRANSITION → UP.</li><li>Temporização com ResetDelay.</li><li>Integração via propriedades ARINC 661.</li><li>Verificação e simulação do modelo.</li></ul>
