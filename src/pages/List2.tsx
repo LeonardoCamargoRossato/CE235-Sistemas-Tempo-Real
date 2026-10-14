@@ -1,7 +1,7 @@
 import CompactListHeader from "../components/CompactListHeader";
 import DriveFolderPreview from "../components/DriveFolderPreview";
 import EvidenceGallery from "../components/EvidenceGallery";
-import ReportPdfViewer from "../components/ReportPdfViewer";
+import DriveFilePreview from "../components/DriveFilePreview";
 import {links} from "../data/links";
 export default function List2(){return <>
  <CompactListHeader list="LIST 2" lab="LAB 3" title="Integração entre Aplicações"/>
@@ -12,7 +12,10 @@ export default function List2(){return <>
     <DriveFolderPreview title="Arquivos do Lab 3" description="Pasta oficial com projetos, relatórios, arquivos compactados e demais entregáveis existentes do Lab 3." href={links.lab3Drive} embed={links.lab3Embed} buttonLabel="Abrir pasta do Lab 3"/>
    </div>
 
-   <ReportPdfViewer title="Relatório do Lab 3" fileName="Relatorio_Lab3_LeonardoRossato.pdf" description="Integração entre aplicações utilizando ANSYS SCADE Suite e ARINC 661." fileId={links.lab3ReportPdfId} fallbackHref={links.lab3Drive}/>
+   <div className="list2-official-docs-grid">
+    <DriveFilePreview title="Relatório — Laboratório 3" fileName="Relatorio_Lab3_LeonardoRossato.pdf" description="Integração entre aplicações utilizando ANSYS SCADE Suite e ARINC 661." fileId={links.lab3ReportPdfId} fallbackHref={links.lab3Drive} large/>
+    <DriveFilePreview title="Enunciado — ListEx 2 / Lab 3" fileName="Aula09.2eCe237Ce230Ce23526n(Especificação Requisitos da Listex2 do LAB 3_Prof. Cunha).docx.pdf" description="Especificação de Requisitos da ListEx 2 — Laboratório 3." localSrc={`${import.meta.env.BASE_URL}documents/list2/Aula09.2eCe237Ce230Ce23526n(Especificação Requisitos da Listex2 do LAB 3_Prof. Cunha).docx.pdf`} fallbackHref={links.list2Drive} large/>
+   </div>
 
    <div className="lab3-evidence-grid">
     <EvidenceGallery title="Prints das pastas" folderHref={links.lab3EvidenceFoldersDrive} folderEmbed={links.lab3EvidenceFoldersEmbed}/>

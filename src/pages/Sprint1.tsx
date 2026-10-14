@@ -5,6 +5,7 @@ import SectionTitle from "../components/SectionTitle";
 import ContributionCard from "../components/ContributionCard";
 import TelemetryFlow from "../components/TelemetryFlow";
 import SprintMediaGallery from "../components/SprintMediaGallery";
+import DriveFilePreview from "../components/DriveFilePreview";
 
 const githubImages = [
   {
@@ -43,7 +44,17 @@ export default function Sprint1() {
 
       <section className="section sprint1-main">
         <div className="container content-stack content-stack--sprint1">
-          <ContributionCard demoUrl={links.us123TelemetryDecoder} githubUrl={links.us123Repository} />
+          <div className="sprint1-contribution-enunciado">
+            <ContributionCard demoUrl={links.us123TelemetryDecoder} githubUrl={links.us123Repository} />
+            <DriveFilePreview
+              title="Enunciado — ListEx 3 / Sprint 1"
+              fileName="Aula09.2fCe237Ce230Ce23526m(Especificação de Requisitos da ListEx3 do Relatório da 1ª Sprint do Projeto do SPRB-TR_BD_Prof. Cunha).docx.pdf"
+              description="Especificação de Requisitos do Relatório da 1ª Sprint do Projeto SPRB-TR/BD."
+              localSrc={`${import.meta.env.BASE_URL}documents/list3/Aula09.2fCe237Ce230Ce23526m(Especificação de Requisitos da ListEx3 do Relatório da 1ª Sprint do Projeto do SPRB-TR_BD_Prof. Cunha).docx.pdf`}
+              fallbackHref={links.list3Drive}
+              large
+            />
+          </div>
 
           <div className="sprint1-actions">
             <a className="button button--primary" href={links.us123TelemetryDecoder} target="_blank" rel="noopener noreferrer">

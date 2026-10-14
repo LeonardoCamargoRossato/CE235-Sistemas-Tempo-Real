@@ -11,6 +11,7 @@ import List0 from "./pages/List0";
 import List1 from "./pages/List1";
 import List2 from "./pages/List2";
 import List3 from "./pages/List3";
+import List4 from "./pages/List4";
 import Artifacts from "./pages/Artifacts";
 import FinalReport from "./pages/FinalReport";
 import Curriculum from "./pages/Curriculum";
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/list1" element={<List1 />} />
           <Route path="/list2" element={<List2 />} />
           <Route path="/list3" element={<List3 />} />
+          <Route path="/list4" element={<List4 />} />
           <Route path="/artefatos" element={<Artifacts />} />
           <Route path="/relatorio-final" element={<FinalReport />} />
           <Route path="/curriculo" element={<Curriculum />} />

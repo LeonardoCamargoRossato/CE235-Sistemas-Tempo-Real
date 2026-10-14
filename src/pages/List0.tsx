@@ -31,6 +31,9 @@ export default function List0() {
         <DriveFilePreview title="Jenkins" fileName="Relatorio_ListEx0_Jenkins_Leonardo_Rossato.pdf"
           description="Relatório da atividade relacionada ao Jenkins e aos conceitos de integração contínua."
           fileId={links.list0JenkinsPdfId} fallbackHref={links.list0Drive}/>
+        <DriveFilePreview title="Enunciado — ListEx 0" fileName="Aula01.2dCe237Csi65Ce235Ce23026s(Especificação de Requisitos de ListEx0_Profs. Cunha-V.Dias).docx.pdf"
+          description="Especificação de Requisitos da Lista de Exercício 0."
+          localSrc={`${import.meta.env.BASE_URL}documents/list0/Aula01.2dCe237Csi65Ce235Ce23026s(Especificação de Requisitos de ListEx0_Profs. Cunha-V.Dias).docx.pdf`} fallbackHref={links.list0Drive}/>
       </div>
 
       <SectionTitle eyebrow="Lab 0" title="Página Individual e Jenkins" description="A Lista de Exercícios 0 teve como objetivo elaborar e disponibilizar uma página de índices individual para acompanhamento das atividades acadêmicas."/>

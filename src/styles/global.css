@@ -355,3 +355,49 @@
     margin-bottom: 18px;
   }
 }
+
+
+/* === Upgrade ListEx oficiais + List 4 === */
+@media (min-width:1200px){
+  .list0-reports-heading + .report-preview-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+}
+.list2-official-docs-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  align-items:stretch;
+}
+.list2-official-docs-grid > *{min-width:0}
+.list2-official-docs-grid .drive-file-preview-card{height:100%}
+.list2-official-docs-grid .drive-file-preview-card__viewer{height:520px}
+
+.sprint1-contribution-enunciado{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:20px;
+  width:100%;
+  align-items:stretch;
+}
+.sprint1-contribution-enunciado > *{min-width:0}
+.sprint1-contribution-enunciado .contribution-card{height:100%}
+.sprint1-contribution-enunciado .drive-file-preview-card{height:100%}
+.sprint1-contribution-enunciado .drive-file-preview-card__viewer{height:360px}
+
+.button--disabled{
+  opacity:.62;
+  cursor:default;
+  pointer-events:none;
+}
+
+@media(max-width:900px){
+  .list2-official-docs-grid,
+  .sprint1-contribution-enunciado{
+    grid-template-columns:1fr;
+  }
+  .list2-official-docs-grid .drive-file-preview-card__viewer,
+  .sprint1-contribution-enunciado .drive-file-preview-card__viewer{
+    height:430px;
+  }
+}
