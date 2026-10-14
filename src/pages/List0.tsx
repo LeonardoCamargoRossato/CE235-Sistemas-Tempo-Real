@@ -1,4 +1,5 @@
 import DriveFolderPreview from "../components/DriveFolderPreview";
+import CompactListHeader from "../components/CompactListHeader";
 import DriveFilePreview from "../components/DriveFilePreview";
 import FileCard from "../components/FileCard";
 import SectionTitle from "../components/SectionTitle";
@@ -9,9 +10,7 @@ const item = getList("list0");
 
 export default function List0() {
   return <>
-    <section className="page-header"><div className="container">
-      <span className="eyebrow">CE-235 · LIST 0</span><h1>LIST 0</h1><h2>Lab 0 — Página Individual e Jenkins</h2>
-    </div></section>
+    <CompactListHeader list="LIST 0" lab="LAB 0" title="Página Individual e Jenkins"/>
     <section className="section"><div className="container content-stack">
       <DriveFolderPreview
         title="Arquivos da List 0"

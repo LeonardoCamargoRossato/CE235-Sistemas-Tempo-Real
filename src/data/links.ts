@@ -46,5 +46,15 @@ export const links = {
   lab1ReportPdfId: "1PNPX7kRZ59qXCsfD6lfPStdCUrdbWGwy",
   lab2ReportPdfId: "1-odDzBoKEgW6-7q3WUr6G7mUVHQolIqq",
 
+  lab3Drive: "https://drive.google.com/drive/folders/1CFklZxcGIiiDy3KsP-XvlKMsVf1PLtyz",
+  lab3Embed: "https://drive.google.com/embeddedfolderview?id=1CFklZxcGIiiDy3KsP-XvlKMsVf1PLtyz#list",
+  lab3EvidenceFoldersDrive: "https://drive.google.com/drive/folders/1TcEBITsXk-H7qtuWt4mKWqZ5QO_2YBh7",
+  lab3EvidenceFoldersEmbed: "https://drive.google.com/embeddedfolderview?id=1TcEBITsXk-H7qtuWt4mKWqZ5QO_2YBh7#grid",
+  lab3Project1Drive: "https://drive.google.com/drive/folders/1_-kE0v3LOyjVWtBOHU5gc-soH-xi7_N4",
+  lab3Project1Embed: "https://drive.google.com/embeddedfolderview?id=1_-kE0v3LOyjVWtBOHU5gc-soH-xi7_N4#grid",
+  lab3Project2Drive: "https://drive.google.com/drive/folders/1Qmd4Owbn12u17GEXMEVgO38Y7dR4fmZz",
+  lab3Project2Embed: "https://drive.google.com/embeddedfolderview?id=1Qmd4Owbn12u17GEXMEVgO38Y7dR4fmZz#grid",
+  lab3ReportPdfId: "1gzpUA-pnHG0inlylQt7LM7EVNVIvAFYz",
+
   finalReport: ""
 } as const;
