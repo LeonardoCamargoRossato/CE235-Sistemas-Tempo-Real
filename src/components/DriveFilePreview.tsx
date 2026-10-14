@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { ExternalLink, Expand, FileText, X } from "lucide-react";
 
-type Props={title:string;fileName:string;description:string;fileId?:string;localSrc?:string;fallbackHref:string;buttonLabel?:string;large?:boolean};
+type Props={title:string;fileName:string;description:string;fileId?:string;localSrc?:string;fallbackHref:string;buttonLabel?:string;large?:boolean;fitMode?:"width"};
 
-export default function DriveFilePreview({title,fileName,description,fileId,localSrc,fallbackHref,buttonLabel="Abrir PDF",large=false}:Props){
+export default function DriveFilePreview({title,fileName,description,fileId,localSrc,fallbackHref,buttonLabel="Abrir PDF",large=false,fitMode}:Props){
  const [open,setOpen]=useState(false);
- const preview=fileId?`https://drive.google.com/file/d/${fileId}/preview`:localSrc;
+ const rawPreview=fileId?`https://drive.google.com/file/d/${fileId}/preview`:localSrc;
+ const preview=rawPreview&&fitMode==="width"&&!fileId?`${rawPreview}#view=FitH&zoom=page-width`:rawPreview;
  const href=fileId?`https://drive.google.com/file/d/${fileId}/view`:(localSrc??fallbackHref);
  useEffect(()=>{if(!open)return; const onKey=(e:KeyboardEvent)=>{if(e.key==="Escape")setOpen(false)}; document.addEventListener("keydown",onKey); document.body.classList.add("modal-open"); return()=>{document.removeEventListener("keydown",onKey);document.body.classList.remove("modal-open")}},[open]);
  return <>

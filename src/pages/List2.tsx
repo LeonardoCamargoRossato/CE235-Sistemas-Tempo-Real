@@ -14,7 +14,7 @@ export default function List2(){return <>
 
    <div className="list2-official-docs-grid">
     <DriveFilePreview title="Relatório — Laboratório 3" fileName="Relatorio_Lab3_LeonardoRossato.pdf" description="Integração entre aplicações utilizando ANSYS SCADE Suite e ARINC 661." fileId={links.lab3ReportPdfId} fallbackHref={links.lab3Drive} large/>
-    <DriveFilePreview title="Enunciado — ListEx 2 / Lab 3" fileName="Aula09.2eCe237Ce230Ce23526n(Especificação Requisitos da Listex2 do LAB 3_Prof. Cunha).docx.pdf" description="Especificação de Requisitos da ListEx 2 — Laboratório 3." localSrc={`${import.meta.env.BASE_URL}documents/list2/Aula09.2eCe237Ce230Ce23526n(Especificação Requisitos da Listex2 do LAB 3_Prof. Cunha).docx.pdf`} fallbackHref={links.list2Drive} large/>
+    <DriveFilePreview title="Enunciado — ListEx 2 / Lab 3" fileName="listex2-enunciado.pdf" description="Especificação de Requisitos da ListEx 2 — Laboratório 3." localSrc={`${import.meta.env.BASE_URL}documents/list2/listex2-enunciado.pdf`} fallbackHref={links.list2Drive} large fitMode="width"/>
    </div>
 
    <div className="lab3-evidence-grid">

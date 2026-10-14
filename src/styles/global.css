@@ -481,3 +481,44 @@
     height:480px;
   }
 }
+
+
+/* === Hotfix: PDF paths/fit-width + Sprint 1 equal-height pair === */
+.sprint1-contribution-enunciado{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:stretch;
+}
+.sprint1-contribution-enunciado > .contribution-card,
+.sprint1-contribution-enunciado > .drive-file-preview-card{
+  height:100%;
+  align-self:stretch;
+}
+.sprint1-contribution-enunciado .contribution-card{
+  display:flex;
+  flex-direction:column;
+}
+.sprint1-contribution-enunciado .contribution-card__actions{
+  margin-top:auto;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.sprint1-contribution-enunciado .drive-file-preview-card{
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+}
+.sprint1-contribution-enunciado .drive-file-preview-card__viewer{
+  flex:1 1 auto;
+  min-height:360px;
+  height:auto;
+}
+.sprint1-contribution-enunciado .drive-file-preview-card__body{
+  flex:0 0 auto;
+}
+@media(max-width:900px){
+  .sprint1-contribution-enunciado{grid-template-columns:1fr;align-items:start}
+  .sprint1-contribution-enunciado > .contribution-card,
+  .sprint1-contribution-enunciado > .drive-file-preview-card{height:auto}
+  .sprint1-contribution-enunciado .drive-file-preview-card__viewer{height:clamp(430px,65vh,620px);min-height:430px}
+}

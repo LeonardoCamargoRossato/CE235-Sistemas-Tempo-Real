@@ -15,7 +15,7 @@ export default function List1(){return <>
    </div>
    <div className="list1-official-docs-grid">
     <DriveFilePreview title="Relatório do Lab 1" fileName="RelatórioLab1_SistemasTempoReal_ITA_LeonardoRossato.pdf" description="Desenvolvimento e simulação do Landing Gear System utilizando ANSYS SCADE." fileId={links.lab1ReportPdfId} fallbackHref={links.lab1Drive} large/>
-    <DriveFilePreview title="Enunciado — ListEx 1" fileName="Aula09.2dCe237Ce230Ce23526s(Especificação de Requisitos da ListEx1 do LAB 1 e do LAB 2_Prof. Cunha).docx(1).pdf" description="Especificação de Requisitos da ListEx 1 — Labs 1 e 2 / ANSYS SCADE." localSrc={`${import.meta.env.BASE_URL}documents/list1/Aula09.2dCe237Ce230Ce23526s(Especificação de Requisitos da ListEx1 do LAB 1 e do LAB 2_Prof. Cunha).docx(1).pdf`} fallbackHref={links.list1Drive} large/>
+    <DriveFilePreview title="Enunciado — ListEx 1" fileName="listex1-enunciado.pdf" description="Especificação de Requisitos da ListEx 1 — Labs 1 e 2 / ANSYS SCADE." localSrc={`${import.meta.env.BASE_URL}documents/list1/listex1-enunciado.pdf`} fallbackHref={links.list1Drive} large fitMode="width"/>
    </div>
    <div className="evidence-grid"><EvidenceGallery title="Evidências do Lab 1" folderHref={links.lab1EvidenceDrive} folderEmbed={links.lab1EvidenceEmbed}/><EvidenceGallery title="Landing Gear — Evidências da Simulação" folderHref={links.landingGearEvidenceDrive} folderEmbed={links.landingGearEvidenceEmbed}/></div>
    <div className="academic-detail"><h3>O que foi desenvolvido</h3><p className="prose">Desenvolvimento e simulação de um aplicativo de software de sistema embarcado de tempo real para controlar e representar os acionamentos do sistema de trem de pouso de uma aeronave fictícia utilizando ANSYS SCADE.</p>
