@@ -11,15 +11,16 @@ const item = getList("list0");
 export default function List0() {
   return <>
     <CompactListHeader list="LIST 0" lab="LAB 0" title="Página Individual e Jenkins"/>
-    <section className="section"><div className="container content-stack">
+    <section className="section list0-compact-section"><div className="container content-stack list0-compact-stack">
       <DriveFolderPreview
         title="Arquivos da List 0"
         description="Relatórios e materiais da atividade disponíveis diretamente na pasta oficial da List 0."
         href={links.list0Drive}
         embed={links.list0Embed}
+        compact
       />
 
-      <SectionTitle eyebrow="Relatórios" title="Relatórios da List 0" description="Documentos entregues para a atividade de Página Individual, GitHub Pages e Jenkins."/>
+      <div className="list0-reports-heading"><SectionTitle eyebrow="Relatórios" title="Relatórios da List 0" description="Documentos entregues para a atividade de Página Individual, GitHub Pages e Jenkins."/></div>
       <div className="report-preview-grid">
         <DriveFilePreview title="Site antigo — Google Sites" fileName="Lab0_SistemasTempoReal_ITA_LeonardoRossato.pdf"
           description="Relatório referente à primeira versão da página individual desenvolvida utilizando Google Sites."

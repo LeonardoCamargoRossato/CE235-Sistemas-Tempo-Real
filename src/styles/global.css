@@ -208,3 +208,150 @@
 .traceability-grid span,.traceability-grid strong{display:block}.traceability-grid span{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);font-weight:900;margin-bottom:7px}.traceability-grid strong{color:var(--navy);font-size:13px;line-height:1.35}
 @media(max-width:1000px){.sprint-tech-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.traceability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sprint-demo-card iframe{height:520px}}
 @media(max-width:680px){.sprint1-meta .container{align-items:flex-start;flex-direction:column;justify-content:center;padding-top:8px;padding-bottom:8px;gap:3px}.sprint1-actions{margin-top:-12px}.sprint-demo-card iframe{height:430px}.sprint-demo-card__footer{align-items:flex-start;flex-direction:column}.sprint-media-gallery,.sprint-tech-grid,.traceability-grid{grid-template-columns:1fr}.sprint-media-gallery__image{height:230px}.content-stack--sprint1{gap:30px}}
+
+
+/* === List 0 · compactação vertical Full HD ===
+   Escopo exclusivo da página List 0. Não altera as demais Lists. */
+@media (min-width: 1100px) {
+  .list0-compact-section {
+    padding-top: 20px;
+    padding-bottom: 84px;
+  }
+
+  .list0-compact-stack {
+    gap: 28px;
+  }
+
+  /* Drive: preserva a listagem, remove espaço vazio e compacta principalmente o rodapé. */
+  .list0-compact-stack > .embedded-drive-card--compact {
+    margin: 0;
+  }
+
+  .list0-compact-stack > .embedded-drive-card--compact .embedded-drive-card__preview {
+    height: 190px;
+  }
+
+  .list0-compact-stack > .embedded-drive-card--compact .embedded-drive-card__body {
+    min-height: 72px;
+    padding: 10px 14px;
+    grid-template-columns: 38px minmax(0, 1fr);
+    align-items: center;
+    gap: 11px;
+  }
+
+  .list0-compact-stack > .embedded-drive-card--compact .embedded-drive-card__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+  }
+
+  .list0-compact-stack > .embedded-drive-card--compact .embedded-drive-card__body > div {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: max-content minmax(220px, 1fr) max-content;
+    align-items: center;
+    column-gap: 14px;
+  }
+
+  .list0-compact-stack > .embedded-drive-card--compact .embedded-drive-card__body h3 {
+    margin: 0;
+    font-size: 17px;
+    white-space: nowrap;
+  }
+
+  .list0-compact-stack > .embedded-drive-card--compact .embedded-drive-card__body p {
+    margin: 0;
+    min-width: 0;
+    font-size: 12px;
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .list0-compact-stack > .embedded-drive-card--compact .embedded-drive-card__body .button {
+    margin: 0;
+    padding: 9px 12px;
+    white-space: nowrap;
+  }
+
+  /* Aproxima Relatórios do Drive e compacta eyebrow/título/descrição. */
+  .list0-reports-heading {
+    margin-top: 0;
+    margin-bottom: -14px;
+  }
+
+  .list0-reports-heading .section-title {
+    margin: 0;
+    max-width: 900px;
+  }
+
+  .list0-reports-heading .section-title .eyebrow {
+    display: block;
+    margin: 0 0 6px;
+  }
+
+  .list0-reports-heading .section-title h2 {
+    margin: 0 0 6px;
+    font-size: 30px;
+    line-height: 1.08;
+  }
+
+  .list0-reports-heading .section-title p {
+    margin: 0 0 14px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* PDFs continuam grandes e legíveis; apenas reduzimos o excesso vertical. */
+  .list0-reports-heading + .report-preview-grid {
+    margin-top: 0;
+    gap: 12px;
+  }
+
+  .list0-reports-heading + .report-preview-grid .drive-file-preview-card__viewer {
+    height: 270px;
+  }
+
+  .list0-reports-heading + .report-preview-grid .drive-file-preview-card__body {
+    padding: 12px 14px 14px;
+  }
+
+  .list0-reports-heading + .report-preview-grid .drive-file-preview-card__body h3 {
+    margin: 7px 0 3px;
+    font-size: 16px;
+  }
+
+  .list0-reports-heading + .report-preview-grid .drive-file-preview-card__body > small {
+    min-height: 0;
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .list0-reports-heading + .report-preview-grid .drive-file-preview-card__body p {
+    min-height: 0;
+    margin: 8px 0 10px;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .list0-reports-heading + .report-preview-grid .button {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+}
+
+/* Tablet/mobile: mantém fluxo natural e evita compactação agressiva. */
+@media (max-width: 1099px) {
+  .list0-compact-section {
+    padding-top: 32px;
+  }
+
+  .list0-compact-stack {
+    gap: 28px;
+  }
+
+  .list0-reports-heading .section-title {
+    margin-bottom: 18px;
+  }
+}
