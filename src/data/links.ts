@@ -24,5 +24,27 @@ export const links = {
   team2MeetingsEmbed: "https://drive.google.com/embeddedfolderview?id=1U0OeUESwyguVJMc0Mk3b_L-jq-QqGBXx#list",
   team2MinutesEmbed: "https://drive.google.com/embeddedfolderview?id=1GPzJXrDRCehLEGxSNJHjlcYZcE7VS0xZ#list",
 
+
+  list0Embed: "https://drive.google.com/embeddedfolderview?id=14sNp-xVnC_lFgO7Mn_b5Bk4OGMUQjB3o#list",
+
+  lab1Drive: "https://drive.google.com/drive/folders/1_cTnh4c3JtqIjl_BCkBQOaqwg4eT4yXj",
+  lab1Embed: "https://drive.google.com/embeddedfolderview?id=1_cTnh4c3JtqIjl_BCkBQOaqwg4eT4yXj#list",
+  lab1EvidenceDrive: "https://drive.google.com/drive/folders/1RB-NLsBF7WKgWIa9OfINEZLJk2dhT5gI",
+  lab1EvidenceEmbed: "https://drive.google.com/embeddedfolderview?id=1RB-NLsBF7WKgWIa9OfINEZLJk2dhT5gI#grid",
+  landingGearEvidenceDrive: "https://drive.google.com/drive/folders/1sHHQ81PZqDwbDf3d_MKftquSTjPh7scI",
+  landingGearEvidenceEmbed: "https://drive.google.com/embeddedfolderview?id=1sHHQ81PZqDwbDf3d_MKftquSTjPh7scI#grid",
+
+  lab2Drive: "https://drive.google.com/drive/folders/1IQ8KzA7pjyj1up6okasDFGNGbQFysBtH",
+  lab2Embed: "https://drive.google.com/embeddedfolderview?id=1IQ8KzA7pjyj1up6okasDFGNGbQFysBtH#list",
+  lab2EvidenceDrive: "https://drive.google.com/drive/folders/1FhelNsgOto5OMgCpo8NrjZ5n7fsD00bN",
+  lab2EvidenceEmbed: "https://drive.google.com/embeddedfolderview?id=1FhelNsgOto5OMgCpo8NrjZ5n7fsD00bN#grid",
+
+  // IDs individuais confirmados pelos PDFs fornecidos para esta atualização.
+  list0GoogleSitesPdfId: "1jy2tWh3lLjeBBzD7hNkHghE_IEuMIhg4",
+  list0GithubPagesPdfId: "14-HIQtw5tYN2ANoJ8BPr71ITVogfC7dQ",
+  list0JenkinsPdfId: "1lvWvUBxig2RC23i6lW6OVdor-lmTvn5r",
+  lab1ReportPdfId: "1PNPX7kRZ59qXCsfD6lfPStdCUrdbWGwy",
+  lab2ReportPdfId: "1-odDzBoKEgW6-7q3WUr6G7mUVHQolIqq",
+
   finalReport: ""
 } as const;
