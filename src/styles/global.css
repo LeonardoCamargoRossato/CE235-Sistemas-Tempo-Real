@@ -522,3 +522,73 @@
   .sprint1-contribution-enunciado > .drive-file-preview-card{height:auto}
   .sprint1-contribution-enunciado .drive-file-preview-card__viewer{height:clamp(430px,65vh,620px);min-height:430px}
 }
+
+
+/* === Sprint 1 compact pair — US123 + ListEx 3 === */
+@media (min-width:901px){
+  .sprint1-contribution-enunciado{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px;
+    align-items:stretch;
+  }
+  .sprint1-contribution-enunciado > .contribution-card,
+  .sprint1-contribution-enunciado > .drive-file-preview-card{
+    height:310px;
+    min-height:310px;
+    max-height:310px;
+    align-self:stretch;
+    overflow:hidden;
+  }
+  .sprint1-contribution-enunciado .contribution-card{
+    padding:22px 24px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    gap:0;
+  }
+  .sprint1-contribution-enunciado .contribution-card .eyebrow{margin-bottom:7px}
+  .sprint1-contribution-enunciado .contribution-card h2{margin:0 0 10px}
+  .sprint1-contribution-enunciado .contribution-card p{margin:0 0 16px;line-height:1.55}
+  .sprint1-contribution-enunciado .contribution-card__actions{
+    margin-top:0;
+    display:flex;
+    flex-wrap:nowrap;
+    align-items:center;
+    gap:8px;
+  }
+  .sprint1-contribution-enunciado .contribution-card__actions .button{
+    min-width:0;
+    padding:9px 11px;
+    gap:5px;
+    white-space:nowrap;
+    font-size:12px;
+  }
+  .sprint1-contribution-enunciado .drive-file-preview-card{
+    display:flex;
+    flex-direction:column;
+    min-height:310px;
+  }
+  .sprint1-contribution-enunciado .drive-file-preview-card__viewer{
+    flex:1 1 auto;
+    height:auto;
+    min-height:0;
+    border-bottom:1px solid var(--line);
+  }
+  .sprint1-contribution-enunciado .drive-file-preview-card__body{
+    flex:0 0 auto;
+    padding:10px 14px 12px;
+  }
+  .sprint1-contribution-enunciado .drive-file-preview-card__body .file-type-pill{margin-bottom:4px}
+  .sprint1-contribution-enunciado .drive-file-preview-card__body h3{margin:0 0 2px;font-size:15px;line-height:1.25}
+  .sprint1-contribution-enunciado .drive-file-preview-card__filename{font-size:11px;line-height:1.25}
+  .sprint1-contribution-enunciado .drive-file-preview-card__body p{margin:4px 0 7px;font-size:11px;line-height:1.3}
+  .sprint1-contribution-enunciado .preview-actions{gap:7px}
+  .sprint1-contribution-enunciado .preview-actions .button{padding:7px 10px;font-size:11px}
+}
+
+@media (max-width:900px){
+  .sprint1-contribution-enunciado .contribution-card__actions{
+    margin-top:0;
+    flex-wrap:wrap;
+  }
+}
