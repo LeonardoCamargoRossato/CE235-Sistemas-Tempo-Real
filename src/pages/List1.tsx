@@ -1,11 +1,8 @@
 import CompactListHeader from "../components/CompactListHeader";
 import DriveFolderPreview from "../components/DriveFolderPreview";
 import EvidenceGallery from "../components/EvidenceGallery";
-import FileCard from "../components/FileCard";
 import ReportPdfViewer from "../components/ReportPdfViewer";
-import { getList } from "../data/lists";
 import { links } from "../data/links";
-const item=getList("list1"), lab1=item.files.slice(0,3), lab2=item.files.slice(3);
 
 export default function List1(){return <>
  <CompactListHeader list="LIST 1" lab="LABS 1–2" title="Modelagem e Simulação com ANSYS SCADE"/>
@@ -14,7 +11,6 @@ export default function List1(){return <>
    <div className="lab-dashboard__title"><span>LAB 1</span><h2>Landing Gear System</h2></div>
    <div className="dashboard-materials">
     <DriveFolderPreview title="Arquivos do Lab 1" description="LG.html, relatório, landing_gear.zip e demais materiais do Landing Gear." href={links.lab1Drive} embed={links.lab1Embed} buttonLabel="Abrir pasta do Lab 1"/>
-    <div className="files-grid files-grid--compact">{lab1.map(f=><FileCard key={f.title} file={f} listLabel="LIST 1 · LAB 1" driveUrl={links.lab1Drive}/>)}</div>
    </div>
    <ReportPdfViewer title="Relatório do Lab 1" fileName="RelatórioLab1_SistemasTempoReal_ITA_LeonardoRossato.pdf" description="Desenvolvimento e simulação do Landing Gear System utilizando ANSYS SCADE." fileId={links.lab1ReportPdfId} fallbackHref={links.lab1Drive}/>
    <div className="evidence-grid"><EvidenceGallery title="Evidências do Lab 1" folderHref={links.lab1EvidenceDrive} folderEmbed={links.lab1EvidenceEmbed}/><EvidenceGallery title="Landing Gear — Evidências da Simulação" folderHref={links.landingGearEvidenceDrive} folderEmbed={links.landingGearEvidenceEmbed}/></div>
@@ -29,7 +25,6 @@ export default function List1(){return <>
    <div className="lab-dashboard__title"><span>LAB 2</span><h2>Fuel Management System</h2></div>
    <div className="dashboard-materials">
     <DriveFolderPreview title="Arquivos do Lab 2" description="Relatório, Lab2.zip e demais materiais do Fuel Management." href={links.lab2Drive} embed={links.lab2Embed} buttonLabel="Abrir pasta do Lab 2"/>
-    <div className="files-grid files-grid--compact">{lab2.map(f=><FileCard key={f.title} file={f} listLabel="LIST 1 · LAB 2" driveUrl={links.lab2Drive}/>)}</div>
    </div>
    <ReportPdfViewer title="Relatório do Lab 2" fileName="RelatórioLab2_SistemasTempoReal_ITA_LeonardoRossato.pdf" description="Desenvolvimento e simulação do Fuel Management utilizando ANSYS SCADE Suite e SCADE Display." fileId={links.lab2ReportPdfId} fallbackHref={links.lab2Drive}/>
    <div className="evidence-grid evidence-grid--single"><EvidenceGallery title="Fuel Management — Evidências da Simulação" folderHref={links.lab2EvidenceDrive} folderEmbed={links.lab2EvidenceEmbed}/></div>

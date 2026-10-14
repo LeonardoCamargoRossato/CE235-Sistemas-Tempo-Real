@@ -1,11 +1,8 @@
 import CompactListHeader from "../components/CompactListHeader";
 import DriveFolderPreview from "../components/DriveFolderPreview";
 import EvidenceGallery from "../components/EvidenceGallery";
-import FileCard from "../components/FileCard";
 import ReportPdfViewer from "../components/ReportPdfViewer";
-import {getList} from "../data/lists";
 import {links} from "../data/links";
-const item=getList("list2");
 export default function List2(){return <>
  <CompactListHeader list="LIST 2" lab="LAB 3" title="Integração entre Aplicações"/>
  <section className="section dashboard-section"><div className="container content-stack content-stack--compact">
@@ -13,7 +10,6 @@ export default function List2(){return <>
    <div className="lab-dashboard__title"><span>LAB 3</span><h2>Integração Team1 ↔ Team2</h2></div>
    <div className="dashboard-materials">
     <DriveFolderPreview title="Arquivos do Lab 3" description="Pasta oficial com projetos, relatórios, arquivos compactados e demais entregáveis existentes do Lab 3." href={links.lab3Drive} embed={links.lab3Embed} buttonLabel="Abrir pasta do Lab 3"/>
-    <div className="files-grid files-grid--compact">{item.files.map(f=><FileCard key={f.title} file={f} listLabel="LIST 2 · LAB 3" driveUrl={links.lab3Drive}/>)}</div>
    </div>
 
    <ReportPdfViewer title="Relatório do Lab 3" fileName="Relatorio_Lab3_LeonardoRossato.pdf" description="Integração entre aplicações utilizando ANSYS SCADE Suite e ARINC 661." fileId={links.lab3ReportPdfId} fallbackHref={links.lab3Drive}/>
