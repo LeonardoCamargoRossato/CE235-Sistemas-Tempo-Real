@@ -69,12 +69,11 @@ npm run preview
 - **Repositório Telemetry Decoder:** https://github.com/LeonardoCamargoRossato/US123-Telemetry-Decoder
 - **Subsprint / Issue #70:** https://github.com/Projeto-SPRB-TR-BD/Projeto-SPRB-TR-BD/issues/70
 
+## Portfólio
+
+**Portfólio técnico pessoal:** https://leonardocamargorossato.github.io/LCR-SolutionsArchitecture-IA-Quantum/#/
+
 ## Autor
 
 **Leonardo Camargo Rossato**  
 Arquiteto de Soluções · Doutorando no ITA
-
-Para conhecer meus demais projetos, pesquisa e atuação profissional:
-
-**Site pessoal / Portfólio:**  
-https://leonardocamargorossato.github.io/LCR-SolutionsArchitecture-IA-Quantum/#/
