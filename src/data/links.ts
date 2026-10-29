@@ -12,11 +12,11 @@ export const links = {
   sprbCe235: "https://sites.google.com/view/projeto-sprb-trbd/disciplinas/ce-235",
   projectGithub: "https://github.com/Projeto-SPRB-TR-BD",
   projectDrive: "https://drive.google.com/drive/folders/1Gf_Hp4CZFhhk_zP-RPPmDpy95ADVrm4h",
-  us123TelemetryDecoder: "https://leonardocamargorossato.github.io/US123-Telemetry-Decoder/",
-  us123Repository: "https://github.com/LeonardoCamargoRossato/US123-Telemetry-Decoder",
+  us123TelemetryDecoder: "https://leonardocamargorossato.github.io/ITA-US123-Telemetry-Decoder/",
+  us123Repository: "https://github.com/LeonardoCamargoRossato/ITA-US123-Telemetry-Decoder",
   us123Issue41: "https://github.com/Projeto-SPRB-TR-BD/Projeto-SPRB-TR-BD/issues/41",
   us123Issue70: "https://github.com/Projeto-SPRB-TR-BD/Projeto-SPRB-TR-BD/issues/70",
-  sprint1Page: "https://leonardocamargorossato.github.io/CE235-Sistemas-Tempo-Real/#/sprint1",
+  sprint1Page: "https://leonardocamargorossato.github.io/ITA-CE235-EmbeddedSystems-RealTime/#/sprint1",
   profCunha: "https://comp.ita.br/~cunha/home.html",
   portfolio: "https://leonardocamargorossato.github.io/LCR-SolutionsArchitecture-IA-Quantum/#/",
   scadeOfficial: "https://www.ansys.com/products/embedded-software/ansys-scade-suite",
@@ -30,7 +30,6 @@ export const links = {
   team2ArtifactsEmbed: "https://drive.google.com/embeddedfolderview?id=1i1Lg8kU-FYGcpiFOpuzcvHd6dXdmFEh2#list",
   team2MeetingsEmbed: "https://drive.google.com/embeddedfolderview?id=1U0OeUESwyguVJMc0Mk3b_L-jq-QqGBXx#list",
   team2MinutesEmbed: "https://drive.google.com/embeddedfolderview?id=1GPzJXrDRCehLEGxSNJHjlcYZcE7VS0xZ#list",
-
 
   list0Embed: "https://drive.google.com/embeddedfolderview?id=14sNp-xVnC_lFgO7Mn_b5Bk4OGMUQjB3o#list",
 
