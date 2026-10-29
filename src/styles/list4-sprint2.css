@@ -1,0 +1,18 @@
+.list4-sprint2 .list4-enunciado-card{display:flex;flex-direction:column}
+.list4-sprint2 .list4-enunciado-card .drive-file-preview-card__viewer{background:linear-gradient(135deg,#f4f7fa,#eaf1f8);color:var(--blue);display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;text-align:center}
+.list4-sprint2 .list4-enunciado-card .drive-file-preview-card__viewer span{font-weight:800;color:var(--navy)}
+.list4-sprint2 .sprint2-report-block{display:grid;gap:24px}
+.list4-sprint2 .sprint2-report-block .drive-file-preview-card__viewer{height:clamp(520px,68vh,760px)}
+.list4-sprint2 .sprint2-flow{background:var(--navy);border-radius:18px;padding:24px;display:flex;align-items:stretch;gap:9px;overflow-x:auto;box-shadow:var(--shadow)}
+.list4-sprint2 .sprint2-flow>span{min-width:145px;flex:1 0 145px;background:#0f3158;border:1px solid #285886;border-radius:12px;color:#fff;padding:16px 13px;display:flex;flex-direction:column;justify-content:center;text-align:center;gap:5px}
+.list4-sprint2 .sprint2-flow small{font-size:10px;letter-spacing:.12em;color:var(--gold);font-weight:900}
+.list4-sprint2 .sprint2-flow strong{font-size:13px;line-height:1.35}
+.list4-sprint2 .sprint2-flow>i{font-style:normal;color:var(--gold);font-size:23px;display:grid;place-items:center}
+.list4-sprint2 .flow-note{margin:14px 0 0;color:var(--muted);font-size:14px;line-height:1.65}
+.list4-sprint2 .traceability-grid__pending{background:#fff;border:1px dashed #c9d6e5;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:7px;color:var(--muted)}
+.list4-sprint2 .traceability-grid__pending span{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:900;color:var(--blue)}
+.list4-sprint2 .traceability-grid__pending strong{color:#6a7788}
+.list4-sprint2 .sprint2-bridge{grid-template-columns:1fr auto 1fr auto 1fr auto 1fr}
+.list4-sprint2 .sprint2-next-step{margin-top:20px;border-left:4px solid var(--gold)}
+@media(max-width:1000px){.list4-sprint2 .sprint2-bridge{grid-template-columns:1fr;gap:12px}.list4-sprint2 .sprint2-bridge>i{transform:rotate(90deg);justify-self:center}.list4-sprint2 .sprint2-flow{flex-direction:column;overflow:visible}.list4-sprint2 .sprint2-flow>span{min-width:0;flex:auto}.list4-sprint2 .sprint2-flow>i{transform:rotate(90deg)}}
+@media(max-width:900px){.list4-sprint2 .sprint2-report-block .drive-file-preview-card__viewer{height:clamp(430px,65vh,620px)}}
