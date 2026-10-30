@@ -13,18 +13,22 @@ const sprint2ReportUrl = `https://drive.google.com/file/d/${sprint2ReportId}/vie
 const rawProcessedGuideId = "16-t_z0elYB_lxDx4RF5XY-rsCLCsl3zv";
 const localArchitectureId = "1GOFfQGxtIgRgEW1p3etudt_qrudVdlSk";
 
-const evidenceAtlas = `${import.meta.env.BASE_URL}images/sprint2/us221/us221-evidence-atlas.webp`;
+const us221Image = (fileName: string) =>
+  `${import.meta.env.BASE_URL}images/sprint2/us221/${encodeURIComponent(fileName)}`;
+
+const figure1Image = us221Image("Fluxo e Arquitetura dos dados na US221.png");
+const figure2Image = us221Image("JSON_para_Struct.png");
 const kanbanImage = `${import.meta.env.BASE_URL}images/sprint2/us221/sprint2-kanban-board.webp`;
 
 const carouselItems: SprintEvidenceItem[] = [
-  { label: "Tela1_US221_Aba_Monitor.png", alt: "Tela 1 da US221 — Aba Monitor", spriteIndex: 2 },
-  { label: "Tela2_US221_Aba_FluxoDeDados.png", alt: "Tela 2 da US221 — Aba Fluxo de Dados", spriteIndex: 3 },
-  { label: "Tela3_US221_Aba_Raw&Storage.png", alt: "Tela 3 da US221 — Aba Raw & Storage", spriteIndex: 4 },
-  { label: "Tela3_US221_Aba_Raw&Storage2.png", alt: "Tela 3 da US221 — Aba Raw & Storage, segunda visão", spriteIndex: 5 },
-  { label: "Tela3_US221_Aba_Raw&Storage_RAW.png", alt: "Tela 3 da US221 — Raw & Storage RAW", spriteIndex: 6 },
-  { label: "Tela3_US221_Aba_Raw&Storage_RAW2.png", alt: "Tela 3 da US221 — Raw & Storage RAW, segunda visão", spriteIndex: 7 },
-  { label: "Tela4_US221_Aba_Api&Scade.png", alt: "Tela 4 da US221 — Aba API & SCADE", spriteIndex: 8 },
-  { label: "Tela4_US221_Aba_Api&Scade2.png", alt: "Tela 4 da US221 — Aba API & SCADE, segunda visão", spriteIndex: 9 },
+  { label: "Tela1_US221_Aba_Monitor.png", alt: "Tela 1 da US221 — Aba Monitor", src: us221Image("Tela1_US221_Aba_Monitor.png") },
+  { label: "Tela2_US221_Aba_FluxoDeDados.png", alt: "Tela 2 da US221 — Aba Fluxo de Dados", src: us221Image("Tela2_US221_Aba_FluxoDeDados.png") },
+  { label: "Tela3_US221_Aba_Raw&Storage.png", alt: "Tela 3 da US221 — Aba Raw & Storage", src: us221Image("Tela3_US221_Aba_Raw&Storage.png") },
+  { label: "Tela3_US221_Aba_Raw&Storage2.png", alt: "Tela 3 da US221 — Aba Raw & Storage, segunda visão", src: us221Image("Tela3_US221_Aba_Raw&Storage2.png") },
+  { label: "Tela3_US221_Aba_Raw&Storage_RAW.png", alt: "Tela 3 da US221 — Raw & Storage RAW", src: us221Image("Tela3_US221_Aba_Raw&Storage_RAW.png") },
+  { label: "Tela3_US221_Aba_Raw&Storage_RAW2.png", alt: "Tela 3 da US221 — Raw & Storage RAW, segunda visão", src: us221Image("Tela3_US221_Aba_Raw&Storage_RAW2.png") },
+  { label: "Tela4_US221_Aba_Api&Scade.png", alt: "Tela 4 da US221 — Aba API & SCADE", src: us221Image("Tela4_US221_Aba_Api&Scade.png") },
+  { label: "Tela4_US221_Aba_Api&Scade2.png", alt: "Tela 4 da US221 — Aba API & SCADE, segunda visão", src: us221Image("Tela4_US221_Aba_Api&Scade2.png") },
   { label: "Kanban — Sprint 2", alt: "Kanban da Sprint 2 do Projeto SPRB-TR/BD", src: kanbanImage },
 ];
 
@@ -99,21 +103,18 @@ export default function List4() {
 
             <div className="sprint2-main-figures">
               <SprintSpriteFigure
-                atlasSrc={evidenceAtlas}
-                spriteIndex={0}
+                src={figure1Image}
                 caption="Figura 1: Fluxo e Arquitetura dos dados na US221.png"
                 alt="Fluxo e Arquitetura dos dados na US221"
               />
               <SprintSpriteFigure
-                atlasSrc={evidenceAtlas}
-                spriteIndex={1}
+                src={figure2Image}
                 caption="Figura 2: JSON_para_Struct.png"
                 alt="JSON para Struct na US221"
               />
             </div>
 
             <SprintEvidenceCarousel
-              atlasSrc={evidenceAtlas}
               items={carouselItems}
               title="Telas da implementação US221"
             />
