@@ -1,50 +1,31 @@
 import { ExternalLink, FileText } from "lucide-react";
 import CompactListHeader from "../components/CompactListHeader";
 import SectionTitle from "../components/SectionTitle";
-import SprintMediaGallery from "../components/SprintMediaGallery";
+import SprintEvidenceCarousel, { SprintEvidenceItem, SprintSpriteFigure } from "../components/SprintEvidenceCarousel";
 import DriveFilePreview from "../components/DriveFilePreview";
-import { links } from "../data/links";
 import "../styles/list4-sprint2.css";
 
-const us221IssueUrl = "https://github.com/Projeto-SPRB-TR-BD/Projeto-SPRB-TR-BD/issues/107";
-const us221Repository = links.us123Repository;
+const personalRepositoryUrl = "https://github.com/LeonardoCamargoRossato/ITA-CE235-EmbeddedSystems-RealTime";
+const us221ProjectUrl = "https://github.com/orgs/Projeto-SPRB-TR-BD/projects/4/views/1?pane=issue&itemId=272020328&issue=Projeto-SPRB-TR-BD%7CProjeto-SPRB-TR-BD%7C107";
 const list4Page = "https://leonardocamargorossato.github.io/ITA-CE235-EmbeddedSystems-RealTime/#/list4";
 const sprint2ReportId = "1IStpsYhr1VYVN0uODNDt2q2WidJLI6N8";
 const sprint2ReportUrl = `https://drive.google.com/file/d/${sprint2ReportId}/view`;
 const rawProcessedGuideId = "16-t_z0elYB_lxDx4RF5XY-rsCLCsl3zv";
 const localArchitectureId = "1GOFfQGxtIgRgEW1p3etudt_qrudVdlSk";
 
-const sprint2Images = [
-  {
-    src: `${import.meta.env.BASE_URL}images/sprint2/us221/arquitetura-visao-geral.webp`,
-    alt: "Arquitetura geral da evolução local do Telemetry Decoder na Sprint 2",
-    caption: "Arquitetura geral — Sprint 2",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}images/sprint2/us221/arquitetura-dois-fluxos.webp`,
-    alt: "Arquitetura com separação dos fluxos RAW e PROCESSED",
-    caption: "Fluxos RAW / PROCESSED",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}images/sprint2/us221/json-raw-para-struct-c.webp`,
-    alt: "Mapeamento da telemetria JSON RAW para uma struct C",
-    caption: "JSON RAW → struct C",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}images/sprint2/us221/monitor-localhost.webp`,
-    alt: "Monitor da aplicação da Sprint 2 executando em localhost",
-    caption: "Monitor em localhost",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}images/sprint2/us221/issue-us221-github.webp`,
-    alt: "Issue oficial US221 no GitHub do Projeto SPRB-TR/BD",
-    caption: "Issue US221 — GitHub",
-  },
-  {
-    src: `${import.meta.env.BASE_URL}images/sprint2/us221/sprint2-kanban-board.webp`,
-    alt: "Quadro Kanban da Sprint 2 do Projeto SPRB-TR/BD",
-    caption: "Kanban — Sprint 2",
-  },
+const evidenceAtlas = `${import.meta.env.BASE_URL}images/sprint2/us221/us221-evidence-atlas.webp`;
+const kanbanImage = `${import.meta.env.BASE_URL}images/sprint2/us221/sprint2-kanban-board.webp`;
+
+const carouselItems: SprintEvidenceItem[] = [
+  { label: "Tela1_US221_Aba_Monitor.png", alt: "Tela 1 da US221 — Aba Monitor", spriteIndex: 2 },
+  { label: "Tela2_US221_Aba_FluxoDeDados.png", alt: "Tela 2 da US221 — Aba Fluxo de Dados", spriteIndex: 3 },
+  { label: "Tela3_US221_Aba_Raw&Storage.png", alt: "Tela 3 da US221 — Aba Raw & Storage", spriteIndex: 4 },
+  { label: "Tela3_US221_Aba_Raw&Storage2.png", alt: "Tela 3 da US221 — Aba Raw & Storage, segunda visão", spriteIndex: 5 },
+  { label: "Tela3_US221_Aba_Raw&Storage_RAW.png", alt: "Tela 3 da US221 — Raw & Storage RAW", spriteIndex: 6 },
+  { label: "Tela3_US221_Aba_Raw&Storage_RAW2.png", alt: "Tela 3 da US221 — Raw & Storage RAW, segunda visão", spriteIndex: 7 },
+  { label: "Tela4_US221_Aba_Api&Scade.png", alt: "Tela 4 da US221 — Aba API & SCADE", spriteIndex: 8 },
+  { label: "Tela4_US221_Aba_Api&Scade2.png", alt: "Tela 4 da US221 — Aba API & SCADE, segunda visão", spriteIndex: 9 },
+  { label: "Kanban — Sprint 2", alt: "Kanban da Sprint 2 do Projeto SPRB-TR/BD", src: kanbanImage },
 ];
 
 export default function List4() {
@@ -71,11 +52,11 @@ export default function List4() {
                 telemetria, sistema legado e ANSYS SCADE.
               </p>
               <div className="card-actions contribution-card__actions">
-                <a className="button button--gold" href={us221Repository} target="_blank" rel="noopener noreferrer">
+                <a className="button button--gold" href={personalRepositoryUrl} target="_blank" rel="noopener noreferrer">
                   Repositório GitHub <ExternalLink size={15}/>
                 </a>
-                <a className="button button--ghost-dark" href={us221IssueUrl} target="_blank" rel="noopener noreferrer">
-                  US221 #107 <ExternalLink size={15}/>
+                <a className="button button--ghost-dark" href={us221ProjectUrl} target="_blank" rel="noopener noreferrer">
+                  US221 T1 <ExternalLink size={15}/>
                 </a>
                 <span className="button button--ghost-dark button--disabled">Subsprint — a confirmar</span>
               </div>
@@ -102,7 +83,7 @@ export default function List4() {
             <SectionTitle
               eyebrow="US221"
               title="Demonstração e evidências da Sprint 2"
-              description="Relatório consolidado da evolução US123 → US221 e evidências visuais do backend executado em localhost."
+              description="Relatório consolidado da evolução US123 → US221 e evidências visuais da implementação executada em localhost."
             />
             <div className="sprint2-report-block">
               <DriveFilePreview
@@ -114,8 +95,28 @@ export default function List4() {
                 buttonLabel="Abrir relatório"
                 large
               />
-              <SprintMediaGallery title="Evidências visuais da Sprint 2" items={sprint2Images} />
             </div>
+
+            <div className="sprint2-main-figures">
+              <SprintSpriteFigure
+                atlasSrc={evidenceAtlas}
+                spriteIndex={0}
+                caption="Figura 1: Fluxo e Arquitetura dos dados na US221.png"
+                alt="Fluxo e Arquitetura dos dados na US221"
+              />
+              <SprintSpriteFigure
+                atlasSrc={evidenceAtlas}
+                spriteIndex={1}
+                caption="Figura 2: JSON_para_Struct.png"
+                alt="JSON para Struct na US221"
+              />
+            </div>
+
+            <SprintEvidenceCarousel
+              atlasSrc={evidenceAtlas}
+              items={carouselItems}
+              title="Telas da implementação US221"
+            />
           </div>
 
           <div className="sprint2-supporting-docs-section">
@@ -152,13 +153,25 @@ export default function List4() {
             <SectionTitle
               eyebrow="GitHub"
               title="Repositório e implementação"
-              description="Arquitetura e evidências da implementação local usada como base técnica para a US221."
+              description="Rastreabilidade enxuta da implementação: Kanban da Sprint 2, atividade US221 T1 e repositório individual da disciplina."
             />
-            <SprintMediaGallery title="Implementação US221 / Telemetry Decoder" items={sprint2Images} className="sprint-media-gallery--github" />
-            <div className="inline-cta">
-              <a className="button button--primary" href={us221Repository} target="_blank" rel="noopener noreferrer">
-                Ver repositório completo no GitHub <ExternalLink size={15}/>
+            <div className="sprint2-repository-focus">
+              <a className="sprint2-kanban-card" href={us221ProjectUrl} target="_blank" rel="noopener noreferrer">
+                <img src={kanbanImage} alt="Kanban da Sprint 2" loading="lazy" />
+                <div>
+                  <span>SPRINT 2</span>
+                  <strong>Kanban — US221</strong>
+                  <small>Abrir atividade no projeto da turma <ExternalLink size={13}/></small>
+                </div>
               </a>
+              <div className="sprint2-repository-links">
+                <a className="button button--primary" href={us221ProjectUrl} target="_blank" rel="noopener noreferrer">
+                  US221 T1 — Arquitetura e especificação dos contratos e tipos de dados da API <ExternalLink size={15}/>
+                </a>
+                <a className="button button--secondary" href={personalRepositoryUrl} target="_blank" rel="noopener noreferrer">
+                  GitHub — ITA-CE235-EmbeddedSystems-RealTime <ExternalLink size={15}/>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -200,8 +213,8 @@ export default function List4() {
           <div>
             <SectionTitle eyebrow="Rastreabilidade" title="Rastreabilidade da atividade" />
             <div className="traceability-grid">
-              <a href={us221IssueUrl} target="_blank" rel="noopener noreferrer"><span>US221 / Sprint 2</span><strong>#107</strong></a>
-              <a href={us221Repository} target="_blank" rel="noopener noreferrer"><span>Repositório</span><strong>Telemetry Decoder</strong></a>
+              <a href={us221ProjectUrl} target="_blank" rel="noopener noreferrer"><span>US221 / Sprint 2</span><strong>T1 — #107</strong></a>
+              <a href={personalRepositoryUrl} target="_blank" rel="noopener noreferrer"><span>Repositório</span><strong>ITA CE-235</strong></a>
               <a href={sprint2ReportUrl} target="_blank" rel="noopener noreferrer"><span>Relatório</span><strong>US123 → US221</strong></a>
               <div className="traceability-grid__pending"><span>Subsprint</span><strong>A confirmar</strong></div>
               <a href={list4Page} target="_blank" rel="noopener noreferrer"><span>Página</span><strong>List 4 / Sprint 2</strong></a>
