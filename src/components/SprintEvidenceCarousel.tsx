@@ -13,12 +13,16 @@ function SpriteMedia({
   item,
   className = "",
 }: {
-  atlasSrc: string;
+  atlasSrc?: string;
   item: SprintEvidenceItem;
   className?: string;
 }) {
   if (item.src) {
-    return <img className={`sprint-evidence-direct ${className}`.trim()} src={item.src} alt={item.alt} />;
+    return <img className={`sprint-evidence-direct ${className}`.trim()} src={item.src} alt={item.alt} loading="eager" />;
+  }
+
+  if (!atlasSrc) {
+    return <div className={`sprint-evidence-sprite ${className}`.trim()} role="img" aria-label={item.alt} />;
   }
 
   const spriteIndex = item.spriteIndex ?? 0;
@@ -41,18 +45,23 @@ function SpriteMedia({
 }
 
 export function SprintSpriteFigure({
+  src,
   atlasSrc,
   spriteIndex,
   caption,
   alt,
 }: {
-  atlasSrc: string;
-  spriteIndex: number;
+  src?: string;
+  atlasSrc?: string;
+  spriteIndex?: number;
   caption: string;
   alt: string;
 }) {
   const [open, setOpen] = useState(false);
-  const item = useMemo(() => ({ label: caption, alt, spriteIndex }), [caption, alt, spriteIndex]);
+  const item = useMemo(
+    () => ({ label: caption, alt, src, spriteIndex }),
+    [caption, alt, src, spriteIndex],
+  );
 
   useEffect(() => {
     if (!open) return;
@@ -93,7 +102,7 @@ export default function SprintEvidenceCarousel({
   items,
   title,
 }: {
-  atlasSrc: string;
+  atlasSrc?: string;
   items: SprintEvidenceItem[];
   title: string;
 }) {
