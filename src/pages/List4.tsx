@@ -11,6 +11,8 @@ const us221Repository = links.us123Repository;
 const list4Page = "https://leonardocamargorossato.github.io/ITA-CE235-EmbeddedSystems-RealTime/#/list4";
 const sprint2ReportId = "1IStpsYhr1VYVN0uODNDt2q2WidJLI6N8";
 const sprint2ReportUrl = `https://drive.google.com/file/d/${sprint2ReportId}/view`;
+const rawProcessedGuideId = "16-t_z0elYB_lxDx4RF5XY-rsCLCsl3zv";
+const localArchitectureId = "1GOFfQGxtIgRgEW1p3etudt_qrudVdlSk";
 
 const sprint2Images = [
   {
@@ -113,6 +115,36 @@ export default function List4() {
                 large
               />
               <SprintMediaGallery title="Evidências visuais da Sprint 2" items={sprint2Images} />
+            </div>
+          </div>
+
+          <div className="sprint2-supporting-docs-section">
+            <SectionTitle
+              eyebrow="Documentação técnica"
+              title="Arquitetura local e integração RAW / Processed"
+              description="Documentos de apoio produzidos na Sprint 2 para registrar a implementação local e orientar a integração das saídas tipadas com o ANSYS SCADE."
+            />
+            <div className="sprint2-supporting-docs">
+              <DriveFilePreview
+                title="Guia SCADE — US123 V1 RAW / Processed"
+                fileName="Guia_SCADE_US123_V1_RAW_Processed.pdf"
+                description="Guia técnico para consumir no ANSYS SCADE as saídas RAW e Processed da V1 local. Explica a ponte C tipada, o mapeamento JSON → struct C, as diferenças entre as estruturas e os passos sugeridos para criar wrappers e operadores externos no SCADE."
+                fileId={rawProcessedGuideId}
+                fallbackHref={`https://drive.google.com/file/d/${rawProcessedGuideId}/view`}
+                buttonLabel="Abrir guia"
+                large
+                fitMode="width"
+              />
+              <DriveFilePreview
+                title="US123 — Arquitetura V1 Local"
+                fileName="US123_V1_Arquitetura_Local.pdf"
+                description="Documento arquitetural da implementação executada em localhost. Registra React/Vite, backend FastAPI, persistência RAW em JSONL e Processed em SQLite, endpoints REST, organização de pastas e a fronteira C preparada para integração com o SCADE."
+                fileId={localArchitectureId}
+                fallbackHref={`https://drive.google.com/file/d/${localArchitectureId}/view`}
+                buttonLabel="Abrir arquitetura"
+                large
+                fitMode="width"
+              />
             </div>
           </div>
 
