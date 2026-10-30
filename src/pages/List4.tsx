@@ -8,6 +8,9 @@ import "../styles/list4-sprint2.css";
 const personalRepositoryUrl = "https://github.com/LeonardoCamargoRossato/ITA-CE235-EmbeddedSystems-RealTime";
 const us221ProjectUrl = "https://github.com/orgs/Projeto-SPRB-TR-BD/projects/4/views/1?pane=issue&itemId=272020328&issue=Projeto-SPRB-TR-BD%7CProjeto-SPRB-TR-BD%7C107";
 const list4Page = "https://leonardocamargorossato.github.io/ITA-CE235-EmbeddedSystems-RealTime/#/list4";
+
+const personalReportId = "1SKaTGLuDpG73mpjqtZCscrjLby858x6S";
+const personalReportUrl = `https://drive.google.com/file/d/${personalReportId}/view`;
 const sprint2ReportId = "1IStpsYhr1VYVN0uODNDt2q2WidJLI6N8";
 const sprint2ReportUrl = `https://drive.google.com/file/d/${sprint2ReportId}/view`;
 const rawProcessedGuideId = "16-t_z0elYB_lxDx4RF5XY-rsCLCsl3zv";
@@ -87,16 +90,16 @@ export default function List4() {
             <SectionTitle
               eyebrow="US221"
               title="Demonstração e evidências da Sprint 2"
-              description="Relatório consolidado da evolução US123 → US221 e evidências visuais da implementação executada em localhost."
+              description="Relatório pessoal da US221 / Sprint 2 e evidências visuais da implementação executada em localhost."
             />
             <div className="sprint2-report-block">
               <DriveFilePreview
-                title="Relatório — Evolução US123 → US221"
-                fileName="US221_Sprint2_Evolucao_US123_para_US221.pdf"
-                description="Arquitetura, diferenças entre as Sprints, backend local, persistência, JSON → struct C e próximos passos."
-                fileId={sprint2ReportId}
-                fallbackHref={sprint2ReportUrl}
-                buttonLabel="Abrir relatório"
+                title="Relatorio Pessoal da US221 / Sprint2 por Leonardo Rossato"
+                fileName="Relatorio_Pessoal_US221_Sprint2_Leonardo_Rossato.pdf"
+                description="Relato individual da contribuição de Leonardo Camargo Rossato na US221 durante a Sprint 2, com arquitetura local, evolução semanal, evidências técnicas e anexos visuais."
+                fileId={personalReportId}
+                fallbackHref={personalReportUrl}
+                buttonLabel="Abrir relatório pessoal"
                 large
               />
             </div>
@@ -207,6 +210,20 @@ export default function List4() {
                   GitHub — ITA-CE235-EmbeddedSystems-RealTime <ExternalLink size={15}/>
                 </a>
               </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="sprint2-report-block">
+              <DriveFilePreview
+                title="Relatório — Evolução US123 → US221"
+                fileName="US221_Sprint2_Evolucao_US123_para_US221.pdf"
+                description="Arquitetura, diferenças entre as Sprints, backend local, persistência, JSON → struct C e próximos passos."
+                fileId={sprint2ReportId}
+                fallbackHref={sprint2ReportUrl}
+                buttonLabel="Abrir relatório"
+                large
+              />
             </div>
           </div>
 
