@@ -153,23 +153,57 @@ export default function List4() {
           <div>
             <SectionTitle
               eyebrow="GitHub"
-              title="Repositório e implementação"
-              description="Rastreabilidade enxuta da implementação: Kanban da Sprint 2, atividade US221 T1 e repositório individual da disciplina."
+              title="Repositório e Kanban da US221"
+              description="Kanban da Sprint 2 com acesso direto à atividade US221 T1 e ao repositório individual da disciplina."
             />
-            <div className="sprint2-repository-focus">
-              <a className="sprint2-kanban-card" href={us221ProjectUrl} target="_blank" rel="noopener noreferrer">
-                <img src={kanbanImage} alt="Kanban da Sprint 2" loading="lazy" />
+            <div className="sprint2-repository-focus" style={{ display: "block" }}>
+              <a
+                className="sprint2-kanban-card"
+                href={us221ProjectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginBottom: 16 }}
+              >
+                <img
+                  src={kanbanImage}
+                  alt="Kanban da Sprint 2"
+                  loading="lazy"
+                  style={{ width: "100%", height: "auto", aspectRatio: "auto", objectFit: "contain" }}
+                />
                 <div>
                   <span>SPRINT 2</span>
                   <strong>Kanban — US221</strong>
                   <small>Abrir atividade no projeto da turma <ExternalLink size={13}/></small>
                 </div>
               </a>
-              <div className="sprint2-repository-links">
-                <a className="button button--primary" href={us221ProjectUrl} target="_blank" rel="noopener noreferrer">
+              <div
+                className="sprint2-repository-links"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  gap: 12,
+                  padding: 0,
+                  border: 0,
+                  background: "transparent",
+                }}
+              >
+                <a
+                  className="button button--primary"
+                  href={us221ProjectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ flex: "1 1 360px" }}
+                >
                   US221 T1 — Arquitetura e especificação dos contratos e tipos de dados da API <ExternalLink size={15}/>
                 </a>
-                <a className="button button--secondary" href={personalRepositoryUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  className="button button--secondary"
+                  href={personalRepositoryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ flex: "1 1 360px" }}
+                >
                   GitHub — ITA-CE235-EmbeddedSystems-RealTime <ExternalLink size={15}/>
                 </a>
               </div>
