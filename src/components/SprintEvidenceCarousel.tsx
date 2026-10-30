@@ -21,12 +21,22 @@ function SpriteMedia({
     return <img className={`sprint-evidence-direct ${className}`.trim()} src={item.src} alt={item.alt} />;
   }
 
-  const offset = -100 * (item.spriteIndex ?? 0);
-  const style = { "--sprite-offset": `${offset}%` } as CSSProperties;
+  const spriteIndex = item.spriteIndex ?? 0;
+  const backgroundPositionY = spriteIndex === 0 ? 0 : (spriteIndex / 9) * 100;
+  const style: CSSProperties = {
+    backgroundImage: `url("${atlasSrc}")`,
+    backgroundSize: "100% 1000%",
+    backgroundPosition: `center ${backgroundPositionY}%`,
+    backgroundRepeat: "no-repeat",
+  };
+
   return (
-    <div className={`sprint-evidence-sprite ${className}`.trim()}>
-      <img src={atlasSrc} alt={item.alt} style={style} />
-    </div>
+    <div
+      className={`sprint-evidence-sprite ${className}`.trim()}
+      style={style}
+      role="img"
+      aria-label={item.alt}
+    />
   );
 }
 
