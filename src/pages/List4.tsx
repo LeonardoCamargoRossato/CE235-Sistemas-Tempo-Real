@@ -7,6 +7,7 @@ import "../styles/list4-sprint2.css";
 
 const personalRepositoryUrl = "https://github.com/LeonardoCamargoRossato/ITA-CE235-EmbeddedSystems-RealTime";
 const us221ProjectUrl = "https://github.com/orgs/Projeto-SPRB-TR-BD/projects/4/views/1?pane=issue&itemId=272020328&issue=Projeto-SPRB-TR-BD%7CProjeto-SPRB-TR-BD%7C107";
+const us221DocumentationUrl = "https://github.com/Projeto-SPRB-TR-BD/Projeto-SPRB-TR-BD/blob/main/ts2/docs/user-stories/US221_Arquitetura_Contrato_C_API.md";
 const list4Page = "https://leonardocamargorossato.github.io/ITA-CE235-EmbeddedSystems-RealTime/#/list4";
 
 const personalReportId = "1SKaTGLuDpG73mpjqtZCscrjLby858x6S";
@@ -56,7 +57,8 @@ export default function List4() {
               <p>
                 Na Sprint 2, a demonstração da US123 foi evoluída para uma arquitetura local com backend FastAPI,
                 persistência RAW/PROCESSED e uma fronteira C preparada para formalizar o contrato de dados entre
-                telemetria, sistema legado e ANSYS SCADE.
+                telemetria, sistema legado e ANSYS SCADE. A documentação técnica da US221 foi publicada no repositório
+                oficial do TS2 para manter a rastreabilidade entre implementação, atividade e especificação.
               </p>
               <div className="card-actions contribution-card__actions">
                 <a className="button button--gold" href={personalRepositoryUrl} target="_blank" rel="noopener noreferrer">
@@ -65,7 +67,9 @@ export default function List4() {
                 <a className="button button--ghost-dark" href={us221ProjectUrl} target="_blank" rel="noopener noreferrer">
                   US221 T1 <ExternalLink size={15}/>
                 </a>
-                <span className="button button--ghost-dark button--disabled">Subsprint — a confirmar</span>
+                <a className="button button--ghost-dark" href={us221DocumentationUrl} target="_blank" rel="noopener noreferrer">
+                  US221 — Contrato C API <ExternalLink size={15}/>
+                </a>
               </div>
             </article>
 
@@ -266,9 +270,9 @@ export default function List4() {
             <SectionTitle eyebrow="Rastreabilidade" title="Rastreabilidade da atividade" />
             <div className="traceability-grid">
               <a href={us221ProjectUrl} target="_blank" rel="noopener noreferrer"><span>US221 / Sprint 2</span><strong>T1 — #107</strong></a>
+              <a href={us221DocumentationUrl} target="_blank" rel="noopener noreferrer"><span>Documentação técnica</span><strong>US221 — Contrato C API</strong></a>
               <a href={personalRepositoryUrl} target="_blank" rel="noopener noreferrer"><span>Repositório</span><strong>ITA CE-235</strong></a>
               <a href={sprint2ReportUrl} target="_blank" rel="noopener noreferrer"><span>Relatório</span><strong>US123 → US221</strong></a>
-              <div className="traceability-grid__pending"><span>Subsprint</span><strong>A confirmar</strong></div>
               <a href={list4Page} target="_blank" rel="noopener noreferrer"><span>Página</span><strong>List 4 / Sprint 2</strong></a>
             </div>
           </div>
